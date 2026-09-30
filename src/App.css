@@ -255,3 +255,64 @@
     color: #666;
     padding: 40px 0;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-conteudo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: escalaModal 0.3s ease-in-out;
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 15px;
+    color: #27ae60;
+}
+
+.modal-conteudo p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+}
+
+.botao-fechar-modal {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-fechar-modal:hover {
+    background-color: #219653;
+}
+
+@keyframes escalaModal {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

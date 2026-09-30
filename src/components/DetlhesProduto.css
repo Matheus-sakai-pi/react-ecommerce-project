@@ -1,0 +1,116 @@
+/* Container principal da página de detalhes centralizado na tela */
+.pagina-detalhes {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Botão de voltar elegante */
+.botao-voltar {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.botao-voltar:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Layout em duas colunas: Imagem à esquerda, Informações à direita */
+.detalhes-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Imagem maior do produto */
+.detalhes-imagem {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+/* Bloco de informações */
+.detalhes-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.detalhes-info h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.detalhes-categoria {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #f0f2f5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin: 0;
+}
+
+.detalhes-descricao {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.detalhes-preco {
+    font-size: 1.8rem;
+    color: #2e7d32;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Reaproveitando a estética do botão de comprar que você já gosta */
+.botao-comprar-detalhes {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-comprar-detalhes:hover {
+    background-color: #1b5e20;
+}
+
+/* Responsividade básica para telas menores (celular) */
+@media (max-width: 768px) {
+    .detalhes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pagina-detalhes {
+        margin: 15px;
+        padding: 20px;
+    }
+}
